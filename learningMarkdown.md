@@ -88,7 +88,7 @@ GitHub 기준 줄을 그냥 바꾸면 줄이 바뀌지 않습니다.
 줄 끝에 `공백 2개`, `\`, `<br>`을 사용할 수 있습니다.
 
 ```markdown
-줄 끝에 공백 두 개를 넣습니다.··
+줄 끝에 공백 두 개를 넣습니다.·· -> 공백표시
 이 줄은 바로 아래에 붙습니다.
 
 줄 끝에 백슬래시를 넣습니다.\
@@ -228,17 +228,31 @@ public class Player : MonoBehaviour
 여는 백틱 뒤에 언어 이름을 적으면 문법 강조가 적용됩니다.
 
 ```markdown
+```csharp 코드
+```
+
 ```csharp
-C# 코드
-```
+using UnityEngine;
 
-```json
-JSON 코드
-```
+public class Player : MonoBehaviour
+{
+    [SerializeField] private float _moveSpeed = 5f;
 
+    private void Update()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * horizontal * _moveSpeed * Time.deltaTime);
+    }
+}
+```
+```
 ```bash
 명령어
 ```
+```bash
+ls
+cd
+dir
 ```
 
 | 언어 | 지정자 |
@@ -304,6 +318,7 @@ JSON 코드
 ```markdown
 ![플레이 화면](images/gameplay.png)
 ```
+![테스트 이미지](./testimagecat.png)
 
 | 요소 | 역할 |
 |---|---|
