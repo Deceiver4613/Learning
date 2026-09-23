@@ -318,7 +318,8 @@ dir
 ```markdown
 ![플레이 화면](images/gameplay.png)
 ```
-![테스트 이미지](./testimagecat.png)
+![테스트 이미지](./testimagecat.png)\
+(테스트용 이미지)
 
 | 요소 | 역할 |
 |---|---|
